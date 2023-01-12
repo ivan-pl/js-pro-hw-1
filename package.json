@@ -1,0 +1,51 @@
+{
+  "name": "js-pro-hw-1",
+  "version": "1.0.0",
+  "description": "maxItemAssociation",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "lint": "prettier --check . && eslint --ext .js,.ts . && tsc --noEmit",
+    "lint:fix": "prettier --write . && eslint --fix --ext .js,.ts .",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivan-pl/js-pro-hw-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivan-pl/js-pro-hw-1/issues"
+  },
+  "homepage": "https://github.com/ivan-pl/js-pro-hw-1#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.18.6",
+    "@jest/globals": "^29.3.1",
+    "@types/jest": "^29.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "babel-jest": "^29.3.1",
+    "eslint": "^8.31.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.2",
+    "eslint-plugin-jest": "^27.2.1",
+    "husky": "^8.0.3",
+    "jest": "^29.3.1",
+    "lint-staged": "^13.1.0",
+    "prettier": "2.8.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write",
+      "eslint --cache --fix --ext .js,.ts"
+    ],
+    "*.{md,json}": "prettier --write"
+  }
+}
