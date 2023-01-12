@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --coverage",
     "lint": "prettier --check . && eslint --ext .js,.ts . && tsc --noEmit",
-    "lint:fix": "prettier --write . && eslint --fix --ext .js,.ts ."
+    "lint:fix": "prettier --write . && eslint --fix --ext .js,.ts .",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -33,9 +34,18 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.2",
     "eslint-plugin-jest": "^27.2.1",
+    "husky": "^8.0.3",
     "jest": "^29.3.1",
+    "lint-staged": "^13.1.0",
     "prettier": "2.8.2",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write",
+      "eslint --cache --fix --ext .js,.ts"
+    ],
+    "*.{md,json}": "prettier --write"
   }
 }
