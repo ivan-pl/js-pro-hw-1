@@ -1,9 +1,7 @@
-type AllowedTypes = string | number;
-
-export default function frequencyCount(lists: AllowedTypes[][]): {
-  [Key: AllowedTypes]: number;
+export default function frequencyCount(lists: string[][]): {
+  [Key: string]: number;
 } {
-  const counter = {} as { [P: AllowedTypes]: number };
+  const counter = {} as { [P: string]: number };
   for (const list of lists) {
     for (const item of list) {
       if (item in counter) {
